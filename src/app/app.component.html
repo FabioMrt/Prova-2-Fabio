@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div style="text-align:center">
+  <form [formGroup]="angForm" novalidate>
+    <label class="center-block">amount:
+      <input class="form-control" formControlName="amount" placeholder="amount">
+    </label><br>
+    <label class="center-block">product:
+      <input class="form-control" formControlName="product" placeholder="product">
+    </label><br>
+    <label class="center-block">paymentMethod:
+      <input class="form-control" formControlName="paymentMethod" placeholder="paymentMethod">
+    </label><br>
+    <label class="center-block">customer:
+      <input class="form-control" formControlName="customer" placeholder="customer">
+    </label><br>
+    <button type="submit" (click)="submit()">Enviar</button>
+  </form>
+</div>
+
+
+<br><br>
+
+
+<div *ngFor="let data of bills">
+  {{data}}
+</div>
